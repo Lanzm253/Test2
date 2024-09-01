@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const linkMappings = {
         1: 'https://mez.ink/pidcheas',
         2: 'https://mez.ink/clark',
-        3: 'https://www.namecheap.com/'
+        3: 'https://mez.ink/Minecraft'
     };
 
     links.forEach(link => {
