@@ -3,11 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Define the link mappings
     const linkMappings = {
-        1: 'https://mez.ink/pidcheas',
-        2: 'https://mez.ink/clark',
-        3: 'https://mez.ink/HeytaekabaHAHAHAHAH',
-        4: 'https://boombastiksideeye.com',
-        5: 'https://mez.ink/Minecraft'
+        1: 'https://mcpedl.org/uploads_files/09-07-2024/minecraft-1-21-2.apk',
+        2: 'https://drive.google.com/file/d/1V9ur36BK5BtrgFMg-oKqqj14CXM8XCu7/view?usp=drive_link'
     };
 
     links.forEach(link => {
