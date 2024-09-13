@@ -1,5 +1,5 @@
 (function() {
-    const allowedHost = 'hdwallpaper56789.blogspot.com'; // Replace with your domain 
+    const allowedHost = 'hdwallpaper56789.blogspot.com'; // Replace with your domain
 
     // Check if the current host is the allowed one
     if (window.location.hostname !== allowedHost) {
@@ -7,29 +7,22 @@
         return; // Prevent further execution if not on the allowed domain
     }
 
+    // Define link mappings
+    const linkMappings = {
+        1: 'https://cdn.imgchest.com/files/my2pcjggdb7.jpg', // Example URL
+        2: 'https://example.com/another-file.jpg'
+        // Add more mappings as needed
+    };
+
     document.addEventListener('DOMContentLoaded', function() {
-        const link = document.getElementById('downloadLink');
+        // Update the linkMappings if needed, or other initialization tasks
+        console.log("External JS loaded and running.");
 
-        // Define the link mappings
-        const linkMappings = {
-            1: 'https://mez.ink/pidcheas',
-            2: 'https://mez.ink/clark',
-            3: 'https://mez.ink/HeytaekabaHAHAHAHAH',
-            4: 'https://boombastiksideeye.com',
-            5: 'https://mez.ink/Minecraft'
-        };
-
-        if (link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default link behavior
-                const linkId = this.getAttribute('data-link-id');
-                const url = linkMappings[linkId];
-                if (url) {
-                    window.location.href = url; // Redirect to the URL
-                } else {
-                    console.error('No URL found for link ID:', linkId);
-                }
-            });
-        }
+        // You might need additional logic here, if necessary
     });
+
+    // Provide a global function to access link mappings, if needed
+    window.getDownloadUrl = function(linkId) {
+        return linkMappings[linkId] || null;
+    };
 })();
