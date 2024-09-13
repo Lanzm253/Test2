@@ -9,11 +9,13 @@
 
     // Define link mappings
     const linkMappings = {
-        1: 'https://cdn.imgchest.com/files/my2pcjggdb7.jpg', // Example URL
-        2: 'https://example.com/another-file.jpg'
-        // Add more mappings as needed
-    };
-
+        6: 'https://cdn.imgchest.com/files/my2pcjggdb7.jpg', // Example URL
+        1: 'https://mez.ink/pidcheas',
+        2: 'https://mez.ink/clark',
+        3: 'https://mez.ink/HeytaekabaHAHAHAHAH',
+        4: 'https://boombastiksideeye.com',
+        5: 'https://mez.ink/Minecraft'
+        };
     document.addEventListener('DOMContentLoaded', function() {
         // Update the linkMappings if needed, or other initialization tasks
         console.log("External JS loaded and running.");
