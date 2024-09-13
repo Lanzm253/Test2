@@ -1,5 +1,5 @@
 (function() {
-    const allowedHost = 'pidclanzwebsite.blogspot.com'; // Replace with your domain
+    const allowedHost = 'hdwallpaper56789.blogspot.com'; // Replace with your domain 
 
     // Check if the current host is the allowed one
     if (window.location.hostname !== allowedHost) {
@@ -8,7 +8,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        const redirectButton = document.getElementById('redirectButton');
+        const link = document.getElementById('downloadLink');
 
         // Define the link mappings
         const linkMappings = {
@@ -19,14 +19,17 @@
             5: 'https://mez.ink/Minecraft'
         };
 
-        redirectButton.addEventListener('click', function() {
-            const linkId = this.getAttribute('data-link-id');
-            const url = linkMappings[linkId];
-            if (url) {
-                window.location.href = url; // Redirect to the URL
-            } else {
-                console.error('No URL found for link ID:', linkId);
-            }
-        });
+        if (link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                const linkId = this.getAttribute('data-link-id');
+                const url = linkMappings[linkId];
+                if (url) {
+                    window.location.href = url; // Redirect to the URL
+                } else {
+                    console.error('No URL found for link ID:', linkId);
+                }
+            });
+        }
     });
 })();
