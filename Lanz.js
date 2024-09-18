@@ -1,4 +1,4 @@
-    // Link mappings for the iframes with the provided image URLs
+      // Link mappings for the iframes with the provided image URLs
     const linkMappings = {
         1: 'https://mcpedl.org/uploads_files/30-11-2021/minecraft-1-18-0.apk',
         2: 'https://cdn.imgchest.com/files/j7kzczjjwr7.jpg',
@@ -17,8 +17,8 @@
             // Create and insert the iframe
             const iframe = document.createElement('iframe');
             iframe.src = linkMappings[linkId];
-            iframe.width = "0";
-            iframe.height = "0";
+            iframe.width = "100%";
+            iframe.height = "50";
             iframeContainer.appendChild(iframe);
 
             // Optional: Clear the stored link ID after loading
