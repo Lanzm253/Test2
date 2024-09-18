@@ -1,6 +1,3 @@
-<div id="iframeContainer"></div>
-
-<script>
     // Link mappings for the iframes with the provided image URLs
     const linkMappings = {
         1: 'https://mcpedl.org/uploads_files/30-11-2021/minecraft-1-18-0.apk',
@@ -33,4 +30,3 @@
 
     // Call the function to load content when the page loads
     document.addEventListener("DOMContentLoaded", loadIframeContent);
-</script>
