@@ -1,30 +1,36 @@
-(function() {
-    const allowedHost = 'hdwallpaper56789.blogspot.com'; // Replace with your domain
+<div id="iframeContainer"></div>
 
-    // Check if the current host is the allowed one
-    if (window.location.hostname !== allowedHost) {
-        console.error('This script is only allowed on the authorized domain.');
-        return; // Prevent further execution if not on the allowed domain
+<script>
+    // Link mappings for the iframes with the provided image URLs
+    const linkMappings = {
+        1: 'https://mcpedl.org/uploads_files/30-11-2021/minecraft-1-18-0.apk',
+        2: 'https://cdn.imgchest.com/files/j7kzczjjwr7.jpg',
+        3: 'https://cdn.imgchest.com/files/my2pcjggdb7.jpg'
+    };
+
+    // Function to load iframe based on the stored linkId
+    function loadIframeContent() {
+        const linkId = localStorage.getItem("downloadLinkId");  // Retrieve the stored link ID
+        const iframeContainer = document.getElementById('iframeContainer');
+
+        if (linkMappings[linkId]) {
+            // Clear any previous iframe
+            iframeContainer.innerHTML = '';
+
+            // Create and insert the iframe
+            const iframe = document.createElement('iframe');
+            iframe.src = linkMappings[linkId];
+            iframe.width = "0";
+            iframe.height = "0";
+            iframeContainer.appendChild(iframe);
+
+            // Optional: Clear the stored link ID after loading
+            localStorage.removeItem("downloadLinkId");
+        } else {
+            iframeContainer.innerHTML = 'Invalid or missing link ID.';
+        }
     }
 
-    // Define link mappings
-    const linkMappings = {
-        6: 'https://cdn.imgchest.com/files/my2pcjggdb7.jpg', // Example URL
-        1: 'https://mez.ink/pidcheas',
-        2: 'https://mez.ink/clark',
-        3: 'https://mez.ink/HeytaekabaHAHAHAHAH',
-        4: 'https://boombastiksideeye.com',
-        5: 'https://mez.ink/Minecraft'
-        };
-    document.addEventListener('DOMContentLoaded', function() {
-        // Update the linkMappings if needed, or other initialization tasks
-        console.log("External JS loaded and running.");
-
-        // You might need additional logic here, if necessary
-    });
-
-    // Provide a global function to access link mappings, if needed
-    window.getDownloadUrl = function(linkId) {
-        return linkMappings[linkId] || null;
-    };
-})();
+    // Call the function to load content when the page loads
+    document.addEventListener("DOMContentLoaded", loadIframeContent);
+</script>
